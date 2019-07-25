@@ -1,5 +1,6 @@
 package com.mobileapps.introtokotlin.practice
 
+import java.lang.Math.random
 import java.util.*
 
 fun main (args : Array<String>)
@@ -23,7 +24,58 @@ fun main (args : Array<String>)
     println(canAddFish(10.0, listOf(), 7, true))*/
 
 
-    println(whatShouldIDoToday(readLine()!!))
+   /* println(whatShouldIDoToday(readLine()!!))*/
+
+    /*val spices = listOf("curry", "pepper", "cayenne", "ginger", "red curry", "clue" , "green curry", "red pepper" )
+    //1
+    val spicedOrdered = spices.sortedBy { it.length }
+    println(spicedOrdered)
+    //2
+    val spicesWithCandE = spices.filter { it.startsWith('c') && it.endsWith('e')}
+    println(spicesWithCandE)
+    //3
+    val spice3firstWithC = spices.take(3).filter { it[0] == 'c' }
+    println(spice3firstWithC)*/
+
+  /*  val random1 = random()
+    val random2 = {random()}
+
+    println(random1)
+    println(random2.invoke())
+    println(random2.invoke())*/
+
+
+    //1
+    val rollDice = { Random().nextInt(12) + 1}
+
+    //2 with sides
+    val rollDice2 = { sides: Int ->
+        Random().nextInt(sides) + 1
+    }
+    //3 with 0
+    val rollDice3 = { sides: Int ->
+        if (sides == 0) 0
+        else Random().nextInt(sides) + 1
+    }
+    //4
+    val rollDice4: (Int) -> Int = { sides ->
+        if (sides == 0) 0
+        else Random().nextInt(sides) + 1
+    }
+
+    //println(rollDice.invoke())
+    //println(rollDice2.invoke(3))
+    //println(rollDice3.invoke(0))
+    //println(rollDice4.invoke(5))
+
+    fun gamePlay(diceRoll: Int){
+        // do something with the dice roll
+        println(diceRoll)
+    }
+
+    gamePlay(rollDice3(4))
+
+
 
 }
 
