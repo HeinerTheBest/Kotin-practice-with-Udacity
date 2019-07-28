@@ -44,7 +44,7 @@ fun main (args : Array<String>)
     println(random2.invoke())
     println(random2.invoke())*/
 
-
+/*
     //1
     val rollDice = { Random().nextInt(12) + 1}
 
@@ -61,19 +61,44 @@ fun main (args : Array<String>)
     val rollDice4: (Int) -> Int = { sides ->
         if (sides == 0) 0
         else Random().nextInt(sides) + 1
-    }
+    }*/
 
     //println(rollDice.invoke())
     //println(rollDice2.invoke(3))
     //println(rollDice3.invoke(0))
     //println(rollDice4.invoke(5))
 
-    fun gamePlay(diceRoll: Int){
+    /*fun gamePlay(diceRoll: Int){
         // do something with the dice roll
         println(diceRoll)
     }
 
-    gamePlay(rollDice3(4))
+    gamePlay(rollDice3(4))*/
+
+    /*val spice = SimpleSpice()
+
+    println("the name is: ${spice.name}, and the spiciness is: ${spice.spiciness}, and the number is ${spice.heat} ")
+
+
+    val spices1 = listOf(
+        Spice("curry", "mild"),
+        Spice("pepper", "medium"),
+        Spice("cayenne", "spicy"),
+        Spice("ginger", "mild"),
+        Spice("red curry", "medium"),
+        Spice("green curry", "mild"),
+        Spice("hot pepper", "extremely spicy")
+    )
+
+    val spicelist = spices1.filter {it.heat < 5}*/
+
+    val eBook : eBook = eBook(Book("The amazing history of the hero","heiner"))
+
+    println(eBook.wordsRead)
+
+    eBook.readPage()
+
+    println(eBook.wordsRead)
 
 
 
